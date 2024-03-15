@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=\, initial-scale=1.0">
+    <title>Services</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
+            background-color: lightgray;
+        }
+
+        .container {
+            width: 100%;
+            height: 100vh;
+            padding: 0 8%;
+        }
+
+        .container h1 {
+            text-align: center;
+            padding-top: 100px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .container h1::after {
+            content: '';
+            background: black;
+            width: 100px;
+            height: 5px;
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+
+        }
+
+        .row {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-gap: 30px;
+        }
+
+        .services {
+            text-align: center;
+            padding: 25px 10px;
+            border-radius: 5px;
+            font-size: 14px;
+            cursor: pointer;
+            background: transparent;
+            transition: transform 0.5s, background 0.5s;
+        }
+
+        .services i {
+            font-size: 40px;
+            margin-bottom: 10px;
+            color: black;
+        }
+
+        .services h2 {
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .services:hover {
+            background: black;
+            color: black;
+            transform: scale(1.05);
+        }
+
+        .services:hover i {
+            color: black;
+        }
+    </style>
+    <script src="https://kit.fontawesome.com/9c41e33cd6.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Our Services</h1>
+        <div class="row">
+            <div class="services">
+                <i class="fa-solid fa-laptop"></i>
+                <h2>Web Development
+
+
+                </h2>
+                <p>We offer comprehensive web design and development services that are tailored to meet the unique needs
+                    of your business. Our team of experienced designers and developers work closely with you to create a
+                    website </p>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-chart-simple"></i>
+                <h2>Marketing</h2>
+                <p>In an ideal situation, customers would not have to wait for the delivery of products and services.
+                    However, in the real world, organizations cannot always match exact capability and demand</p>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-signs-post"></i>
+                <h2>Banners</h2>
+                <p> We recommend an image that is at least 3000 px across. This image behaves responsively based on
+                    screen size. The ideal size for this image is 3000px by 1000px. Images not meeting this 3:1 aspect
+                    ration will have some sections that are not visible.</p>
+            </div>
+            <div class="services">
+                <i class="fa-brands fa-pied-piper"></i>
+                <h2>Logo</h2>
+                <p>An interactive logo connects your brand to its audience. It uses symbols, colours, and clever designs
+                    to communicate your brand’s core message.</p>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-video"></i>
+                <h2>Video-Editing</h2>
+                <p>Video editing services can include cutting segments (trimming), re-sequencing clips, adding
+                    transitions & other Special Effects. Linear video editing uses videotape and is edited in a very
+                    linear way.</p>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-laptop-file"></i>
+                <h2>Websites</h2>
+                <p>The overall design is blah and generic. You don’t agree with the tabs, it’s kind of confusing. You
+                    don’t get how this site will help your business grow.</p>
+            </div>
+            <div class="services">
+                <i class="fa-brands fa-dropbox"></i>
+                <h2>Posters</h2>
+                <p>We understand how stressful University can be, which is why we've made our process as easy as
+                    possible. Simply send us your requirements to get a quote, make payment and the work will begin</p>
+            </div>
+            <div class="services">
+                <i class="fa-solid fa-hands"></i>
+                <h2>Web Desining</h2>
+                <p>We offer comprehensive web design and development services that are tailored to meet the unique needs
+                    of your business. Our team of experienced designers and developers work closely with you to create a
+                    website</p>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+
+</html>
