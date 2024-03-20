@@ -4,292 +4,228 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Irfan - Developer Portfolio</title>
+    <title>Home page</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
+            font-family: 'poppins', sans-serif;
         }
 
-        body {
-            background-image: url(again.png);
-            color: rgb(255, 255, 255);
-            background-size: 1500px;
-
-        }
-
-        .background-image {
-            size: 300px;
-
-        }
-
-        nav {
+        .container {
+            min-height: 100vh;
+            width: 100%;
             display: flex;
-            justify-content: space-around;
+
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.5rem;
+            height: 12vh;
+            width: 100%;
+            justify-content: center;
             align-items: center;
-            height: 80px;
-            background-color: rgb(87, 145, 170);
-            background: none;
-            background-color: rgb(61, 60, 58);
-           
-           
+            position: fixed;
+            margin-left: -50px;
+
         }
 
-        nav ul {
-            display: flex;
-            justify-content: flex;
-        }
-
-        nav ul li {
+        .navlist li {
             list-style: none;
-            margin: 0 23px;
         }
 
-        nav ul li a {
+        .navlist li a {
             text-decoration: none;
-            color: rgb(250, 250, 250);
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: white;
+            position: relative;
         }
 
-        nav ul li a:hover {
-            color: black;
+        .navlist li a::after {
+            content: "";
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: .1rem;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform .5s;
         }
 
-        main hr {
-            border: 0;
-            background-color: white;
-            height: 2.2px;
-            margin: 30px 84px;
-           
+        .navlist li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
+        .left,
+        .right {
+            height: 100vh;
+            display: flex;
+            align-items: center;
         }
 
         .left {
-            font-size: 1.5rem;
+            background: gray;
+            width: 70%;
+            padding-left: 3rem;
+
         }
 
-        .firstsection {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-            margin: 110px 0px;
-        }
-
-        .leftsection {
-            font-size: 2.5rem;
-        }
-
-        .firstsection>div {
+        .right {
+            background: linear-gradient(gray, lightgray 50%);
             width: 30%;
-        }
-
-        .rightsection img {
-            width: 80%;
-            padding: -20px 100px;
-            border-radius: 80px ;
-            border: 10px solid;
 
         }
-        .text-gray {
+
+        .icons .fa-brands {
             color: white;
-            margin-bottom: 100px;
+            font-size: 1.7rem;
         }
 
-        .white {
-            color: rgb(87, 145, 170);
-        }
-
-        #element {
-            color: white;
-        }
-
-        .secondsection {
-            max-width: 80vw;
-            margin: auto;
-            height: 80vh;
-        }
-
-        .secondsection h1 {
-            font-size: 1.9rem;
-        }
-
-        .secondsection .box {
-            background: white;
-            width: 76vw;
-            height: 2px;
-            margin: 66px 0;
+        .icons {
             display: flex;
-
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 3rem;
         }
 
-        .secondsection .vertical {
-            height: 93px;
-            width: 1px;
-            background-color: white;
-            margin: 0 100px;
+        .content {
+            margin-left: 4rem;
         }
 
-        .image-top {
-            width: 30px;
-            position: relative;
-            top: -32px;
-            left: -9px;
-        }
-
-        .vertical-title {
-            position: relative;
-            top: 75px;
-            width: 150px;
-
-        }
-
-        .vertical-desc {
-            position: relative;
-            top: 86px;
+        .content .intro {
+            font-size: 1.5rem;
             color: white;
-            width: 150px;
-            font-size: 9px;
+        }
+
+        .content .intro span {
+            color: lightgray;
+        }
+
+        .content h1 {
+            font-size: 4rem;
+            color: lightgray;
+        }
+
+        .content .detail {
+            font-size: 1.1rem;
+            color: white;
+            max-width: 38rem;
+            margin: 1rem 0 4rem 0;
+            line-height: 1.8rem;
+        }
+
+        .btn-container button {
+            border: .1rem solid white;
+            font-size: 1.1rem;
+            padding: .8rem 1.5rem;
+            border-radius: .5rem;
+            cursor: pointer;
+            transition: .5s ease;
+        }
+
+        button:nth-child(1) {
+            background: lightgray;
 
         }
 
-        footer {
-            background-color: none;
-            height: 100px;
+        button:nth-child(2) {
+            background: lightgray;
+            color: black;
+            margin-left: 2rem;
+
         }
 
-        .footer {
-            display: flex;
-            padding: 23px 50px;
-            justify-content: space-evenly;
+        button:nth-child(1):hover {
+            background: transparent;
+            color: lightgray;
         }
 
-        .footer ul {
-            list-style: none;
+        button:nth-child(2):hover {
+            background: transparent;
+            color: lightgray;
         }
 
-        .footer>div {
-            width: 300px;
+        .design .circle {
+            aspect-ratio: 1;
+            position: absolute;
+            border-radius: 50%;
+            top: 50%;
+            left: 70%;
+            transform: translate(-50%, -50%);
+            margin-top: 30px;
+
+        }
+
+        .circle:nth-child(1) {
+            background: linear-gradient(90deg, transparent 50%, gray 50%);
+            width: 38rem;
+
+        }
+
+        .circle:nth-child(2) {
+            background-image: url(okk.jpeg);
+            width: 30rem;
+            background-size: 100%;
+            margin-left: 30px;
+            background-repeat: no-repeat;
+            border: 0.5rem solid white;
+            box-shadow:
+                0 0 1rem white,
+                inset 0 0 1rem white,
+                0 0 2rem white,
+                inset 0 0 2rem white,
+                0 0 4rem lightgray;
         }
     </style>
 </head>
 
 <body>
-    <header>
-        <nav>
-            <div class="left">Irfan's Portfolio</div>
-            <div class="right">
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="About.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="#">Projects</a></li>
-                    <li><a href="contactus.html">Contact Us</a></li>
-                </ul>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section class="firstsection">
-            <div class="leftsection">
-                Hi, My Name is <span class="white">Irfan</span>
-                <div>And I am a passionate</div>
-                <span id="element"></span>
-            </div>
-            <div>
-                <div class="circle"></div>
-            </div>
-            <div class="rightsection">
-                <img src="ye_wali-removebg-preview (1).png" alt="">
-            </div>
-        </section>
-        <hr>
-        <section class="secondsection">
-            <span class="text-gray">What I Have Done So Far</span>
-            <h1>Work Experience</h1>
+    <div class="container">
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="contactus.html">Contact</a></li>
 
-            <div class="box">
-                <div class="vertical">
-                    <img class='image-top' src="5072860.png" alt="">
-                    <div class="vertical-title">
-                        Graphic Designer (2018-continue)
-                    </div>
-                    <div class="vertical-desc">
-                        The digital relation
-                    </div>
+        </ul>
+        <div class="left">
+            <div class="icons">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-linkedin-in"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-codepen"></i>
+            </div>
+            <div class="content">
+                <p class="intro">Hi! I'm <span>IRFAN</span></p>
+                <h1>Web Developer</h1>
+                <p class="detail">Highly motivated and detail-oriented web developer <br>with over 5 years of experience
+                    in
+                    developing responsive<br> websites and applications. Proficient in HTML, CSS<br> JavaScript and
+                    jQuery,
+                    with a strong understanding<br> of web design principles.</p>
+                <div class="btn-container">
+                    <button>Hire Me</button>
+                    <button>View Project</button>
                 </div>
-
-
-                <div class="vertical">
-                    <img class='image-top' src="html.png" alt="">
-                    <div class="vertical-title">
-                        HTML Developer (2018-continue)
-                    </div>
-                    <div class="vertical-desc">
-                        Leading the new Digital World
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class='image-top' src="css.png" alt="">
-                    <div class="vertical-title">
-                        CSS Developer <br>(2019-continue)
-                    </div>
-                    <div class="vertical-desc">
-                        A software that belongs to you
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class='image-top' src="java.png" alt="">
-                    <div class="vertical-title">
-                        Javascript Developer (2020-continue)
-                    </div>
-                    <div class="vertical-desc">
-                        Taking security a step ahead
-                    </div>
-                </div>
-
-                <div class="vertical">
-                    <img class='image-top' src="python.png" alt="">
-                    <div class="vertical-title">
-                        python Developer (2022-continue)
-                    </div>
-                    <div class="vertical-desc">
-                        Inventing better future
-                    </div>
-                </div>
-                <div class="vertical"></div>
-                <div class="vertical"></div>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <div class="footer">
-            <div class="footer-first">
-                <h3>Irfan's Developer Portfolio</h3>
-            </div>
-            <div class="footer-second">
-            </div>
-            <div class="footer-third">
-            </div>
-            <div class="footer-fourth">
-                <ul>
-                    <li>Contact Me : 0346-2746-994</li>
-                    <br>
-                    <li>Thank you !</li>
-
-
-
-
-                </ul>
             </div>
         </div>
-    </footer>
-    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        var typed = new Typed('#element', {
-            strings: ['Web Developer', 'Photo-Editor', 'Web Designer', 'Graphic Designer', 'Web Developer'],
-            typeSpeed: 50,
-        });
-    </script>
+        <div class="right"></div>
+        <div class="design">
+            <div class="circle"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
 </body>
 
 </html>

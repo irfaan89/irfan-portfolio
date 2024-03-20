@@ -11,7 +11,35 @@
             padding: 0;
             box-sizing: border-box;
             font-family: 'poppins', sans-serif;
-            background-color: lightgray;
+
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background: transparent;
+            background-color: rgb(61, 60, 58);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+        }
+
+        nav ul li a:hover {
+            color: black;
         }
 
         .container {
@@ -68,7 +96,7 @@
         }
 
         .services:hover {
-            background: black;
+            background: transparent;
             color: black;
             transform: scale(1.05);
         }
@@ -76,11 +104,31 @@
         .services:hover i {
             color: black;
         }
+
+        .left {
+            font-size: 1.5rem;
+            color: white;
+        }
     </style>
     <script src="https://kit.fontawesome.com/9c41e33cd6.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <div class="left">Irfan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <div class="container">
         <h1>Our Services</h1>
         <div class="row">

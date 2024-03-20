@@ -13,6 +13,55 @@
             box-sizing: border-box;
         }
 
+        .container {
+            min-height: 100vh;
+            width: 100%;
+            display: flex;
+
+        }
+
+        .navlist {
+            display: flex;
+            gap: 3.5rem;
+            height: 12vh;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            margin-left: -50px;
+
+        }
+
+        .navlist li {
+            list-style: none;
+        }
+
+        .navlist li a {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-size: 1rem;
+            color: white;
+            position: relative;
+        }
+
+        .navlist li a::after {
+            content: "";
+            position: absolute;
+            background: white;
+            width: 100%;
+            height: .1rem;
+            left: 0;
+            bottom: -5px;
+            transform: scaleX(0);
+            transform-origin: bottom right;
+            transition: transform .5s;
+        }
+
+        .navlist li a:hover::after {
+            transform: scaleX(1);
+            transform-origin: bottom left;
+        }
+
         .about {
             width: 100%;
             padding: 78px 0px;
@@ -81,27 +130,42 @@
             border: 2px solid gray;
             cursor: pointer;
         }
+
+        .left {
+            font-size: 1.5rem;
+            color: white;
+        }
     </style>
 </head>
 
 <body>
-    <section class="about">
-        <div class="main">
-            <img src="try it.jpg" alt="">
-            <div class="about-text">
-                <h1>About Us</h1>
-                <br>
-                <h5>Developer &<span> Designer</span></h5>
-                <br>
+    <div class="container">
+        <ul class="navlist">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="About.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Projects</a></li>
+            <li><a href="contactus.html">Contact</a></li>
 
-                <p>Looking for a suitable job role in Software Engineering and Development with ABC Inc. to utilize 2+
-                    years of experience in technology engineering
-                    software design, client support and servicing and
-                    server maintenance</p>
-                <button type="button">Let's Talk</button>
+        </ul>
+        <section class="about">
+            <div class="main">
+                <img src="try it.jpg" alt="">
+                <div class="about-text">
+                    <h1>About Us</h1>
+                    <br>
+                    <h5>Developer &<span> Designer</span></h5>
+                    <br>
+
+                    <p>Looking for a suitable job role in Software Engineering and Development with ABC Inc. to utilize
+                        2+
+                        years of experience in technology engineering
+                        software design, client support and servicing and
+                        server maintenance</p>
+                    <button type="button">Let's Talk</button>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
 </body>
 

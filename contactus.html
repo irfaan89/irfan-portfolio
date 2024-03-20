@@ -14,6 +14,41 @@
             font-family: sans-serif;
         }
 
+        nav {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            height: 80px;
+            background-color: rgb(87, 145, 170);
+            background: none;
+            background-color: rgb(61, 60, 58);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: flex;
+        }
+
+        nav ul li {
+            list-style: none;
+            margin: 0 23px;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: rgb(250, 250, 250);
+        }
+
+        nav ul li a:hover {
+            color: black;
+        }
+
+        .left {
+            font-size: 1.5rem;
+            color: white;
+        }
+
+
         .contact {
             min-height: 100vh;
             background-color: lightgray;
@@ -33,7 +68,8 @@
             color: black;
             transition: 0.3s ease;
         }
-        .container h2 :hover{
+
+        .container h2 :hover {
             background-color: lightgray;
 
         }
@@ -122,6 +158,21 @@
 </head>
 
 <body>
+
+    <header>
+        <nav>
+            <div class="left">Irfan's Portfolio</div>
+            <div class="right">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="About.html">About</a></li>
+                    <li><a href="services.html">Services</a></li>
+                    <li><a href="#">Projects</a></li>
+                    <li><a href="contactus.html">Contact Us</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
     <section class="contact">
         <div class="container">
             <h2>Contact Us</h2>
@@ -143,9 +194,9 @@
                 </div>
                 <div class="contact-info">
                     <h3>Contact Information</h3>
-                    <p><i class="fas fa-phone"></i>+1 123 456 789</p>
-                    <p><i class="fas fa-envelope"></i>info@gmail.com</p>
-                    <p><i class="fas fa-map-marker-alt"></i>123 Street, City, Country</p>
+                    <p><i class="fas fa-phone"></i>0346-2746-994</p>
+                    <p><i class="fas fa-envelope"></i>irfanshaikh64666@gmail.com</p>
+                    <p><i class="fas fa-map-marker-alt"></i>R266 kausar town malir, karachi,</p>
 
                 </div>
             </div>
